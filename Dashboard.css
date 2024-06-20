@@ -1,0 +1,238 @@
+body {
+  background-color: #f1f3f6;
+  margin: 0;
+  padding-left: 425px;
+}
+
+.loading-container {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: #111111;
+     opacity: 1;
+     transition: opacity 0.5s ease-in-out;
+     z-index: 9999;
+   }
+
+   .loading-container.hide {
+     opacity: 0;
+     pointer-events: none;
+   }
+
+   .loading-spinner {
+     width: 50px;
+     height: 50px;
+     border: 6px solid #ff5252;
+     border-radius: 50%;
+     border-top-color: transparent;
+     animation: spin 1s ease-in-out infinite;
+   }
+
+   .load-text{
+     font-family: 'Poiret One', cursive;
+     color:#ff5252;
+     font-weight:900;
+     text-align:center;
+     position: fixed;
+   }
+
+   @keyframes spin {
+     0% {
+       transform: rotate(0deg);
+     }
+     100% {
+       transform: rotate(360deg);
+     }
+   }
+
+/* .sidenav {
+  width: 20%;
+  height: 100vh;
+  background-color: #222222;
+  position: fixed;
+  z-index: 1;
+  flex: 1 0 auto;
+} */
+
+.card {
+  margin-top: 20px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: #111111;
+  width:500px;
+  border-radius: 20px;
+  padding-bottom: 10px;
+}
+
+.logo .logo-caption {
+	font-family: 'Poiret One', cursive;
+	color: #ffffff;
+	text-align: center;
+  margin-top: 10px;
+}
+
+.logo .profile {
+  margin-top: 20px;
+  margin-left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%);
+}
+
+.logo .tweak {
+  color: #ff5252;
+  font-weight: bold;
+}
+
+.user{
+  margin-top: 40px;
+  color: #ff5252;
+  font-family: 'Poiret One', cursive;
+  text-align: center;
+}
+
+.main-menu-item {
+  padding: 5px 5px;
+  cursor: pointer;
+  font-family: 'Poiret One', cursive;
+  text-align: center;
+}
+
+.main-menu-item > a {
+  color: #eeeeee;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 20px 20px;
+}
+
+.main-menu-item:hover > a {
+  color: #ff5252;
+}
+
+.treeview-menu {
+  margin-top: 8px;
+  width: 120%;
+  transform: translateX(-5%);
+}
+
+.treeview-menu .treeview {
+  display: block;
+}
+
+.treeview-menu .treeview a {
+  color: #eeeeee;
+  width: 100%;
+  text-decoration: none;
+  font-size: 12px;
+  background-color: #111111;
+}
+
+.treeview-menu .treeview a:hover {
+  color: #ff5252;
+}
+
+.main-menu-item > a > span {
+  margin-left: 10px;
+}
+
+.menu-list .btn {
+  color: white;
+  text-align: left;
+  font-size: .9em;
+  border-radius: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.menu-list .btn:hover {
+  color: #ff5252;
+}
+
+.footer {
+  padding-top: 10px;
+  margin-left: 15%;
+  width: 85%;
+  background: #111111;
+  position: relative;
+  bottom: 0;
+  z-index: 1;
+}
+
+.new-invoice{
+  width: 250px;
+  height: 200px;
+  border: 5px solid #111111;
+  display: inline-block;
+  border-radius: 20px;
+  margin-right: 100px;
+  color: #ff5252;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.new-medicine{
+  width: 250px;
+  height: 200px;
+  border: 5px solid #111111;
+  display:inline-block;
+  margin-left: 80px;
+  border-radius: 20px;
+  color: #ff5252;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.new-supplier{
+  width: 250px;
+  height: 200px;
+  border: 5px solid #111111;
+  display:inline-block;
+  margin-left: 80px;
+  border-radius: 20px;
+  color: #ff5252;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.new-purchase{
+  width: 250px;
+  height: 200px;
+  border: 5px solid #111111;
+  display:inline-block;
+  border-radius: 20px;
+  color: #ff5252;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sales-report{
+  width: 250px;
+  height: 200px;
+  border: 5px solid #111111;
+  display:inline-block;
+  margin-left: 80px;
+  border-radius: 20px;
+  color: #ff5252;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.purchase-report{
+  width: 250px;
+  height: 200px;
+  border: 5px solid #111111;
+  display:inline-block;
+  margin-left: 80px;
+  border-radius: 20px;
+  color: #ff5252;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

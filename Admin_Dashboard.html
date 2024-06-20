@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="Dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="loading-container">
+    <div class="loading-spinner"></div>
+    <div class="load-text">
+      <br><br><br><br><br>
+      LOADING....
+    </div>
+  </div>
+
+  <div class="content">
+    <!-- Content goes here -->
+    <div class="sidenav">
+      <div class="card">
+        <div class="card-body">
+          <div class="logo">
+            <img src="Images/Medicine.png" class="profile"/>
+            <h1 class="logo-caption"><span class="tweak">P</span>ills Pharma<span class="tweak">+</span></h1>
+            <hr style = "color: #ff5252; width:100px;"/>
+            <h1 class="user">ADMIN</h1>
+          </div> <!-- logo class -->
+
+
+          <!-- dashboard start -->
+          <div class="main-menu-item">
+            <a href="Admin_Dashboard.html"><i class="fa fa-dashboard"></i><span>Dashboard</span></a>
+          </div>
+          <!-- dashboard end -->
+          <hr style = "color: white; width:50px;"/>
+          <!-- Medicine start -->
+          <div id="first" class="main-menu-item" onclick="showhide(this.id);">
+            <a  href="#">
+              <i class="fa fa-balance-scale"></i><span>Medicine Stock</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu" style="display: none;">
+              <li class="treeview"><a href="searchMedicine.php">Search Medicine Stock</a></li>
+              <li class="treeview"><a href="Add Medicine.php">Add Medicine Stock </a></li>
+            </ul>
+          </div>
+          <!-- Medicine end -->
+       <hr style = "color: white; width:50px;"/>
+
+          <!-- Staff strat -->
+          <div id="third" class="main-menu-item" onclick="showhide(this.id);">
+            <a href="#">
+              <i class="fa fa-shopping-bag"></i><span>Manage Staff</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu" style="display: none;">
+              <li class="treeview"><a href="searchStaff.php">Search Staff</a></li>
+              <li class="treeview"><a href="addStaff.php">Add new Staff</a></li>
+            </ul>
+          </div>
+          <hr style = "color: white; width:50px;"/>
+          <!-- staff end -->
+          
+          <!-- Supplier start -->
+          <div id="sixth" class="main-menu-item" onclick="showhide(this.id);">
+            <a href="#">
+              <i class="fa fa-dashboard"></i><span>Vendor</span></a>
+            <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu" style="display: none;">
+            <li class="treeview"><a href="addVendor.php">Add Vendor</a></li>
+            <li class="treeview"><a href="searchSupplier.php">Search Vendor</a></li>
+          </div>
+          <hr style = "color: white; width:50px;"/>
+          <!-- Supplier end -->
+          <!-- Supplier start -->
+          <div id="seventh" class="main-menu-item" onclick="showhide(this.id);">
+            <a href="adminLogin.php">
+              <i class="fa fa-dashboard"></i><span>Log out</span></a>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          
+          </ul>
+          </div>  <!-- Supplier end -->
+      </div> <!-- card-body class -->
+    </div>  <!-- card  -->
+  </div>
+
+
+  <script>
+    function showhide(id) {
+    var element = document.getElementById(id);
+    var submenu = element.querySelector(".treeview-menu");
+    submenu.style.display = submenu.style.display === "none" ? "block" : "none";
+  }
+      window.addEventListener("load", function() {
+        var loadingContainer = document.querySelector(".loading-container");
+        var content = document.querySelector(".content");
+        setTimeout(function() {
+          loadingContainer.classList.add("hide");
+          loadingContainer.addEventListener("transitionend", function() {
+            loadingContainer.style.display = "none";
+            content.classList.add("loaded");
+          });
+        }, 200); // Change the delay (in milliseconds) as per your requirement
+      });
+    </script>
